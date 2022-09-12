@@ -1,0 +1,15 @@
+<script>
+  let word = 'Холодильник',
+    vowel = ['а', 'я', 'о', 'ё', 'э', 'е', 'у', 'ю', 'ы', 'и'],
+    vowels = 0,
+    consonant = 0;
+    for (let i = 0; i < word.length; i++) {
+        if (vowel.includes(word[i])) {
+            vowels++;
+        } else if (! ['ь', 'ъ'].includes(word[i])) {
+            consonant++;
+        };
+    };
+    console.log(`Гласные: ${vowels}`);
+    console.log(`Согласные: ${consonant}`);
+</script>
