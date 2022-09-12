@@ -1,0 +1,8 @@
+<script>
+  let number = 53444,
+        toDelete = 3;
+    number =  number.toString().split('');
+    toDelete = toDelete.toString();
+    let deleted = number.splice(number.indexOf(toDelete), 1);
+    console.log(number.join(''));
+</script>
