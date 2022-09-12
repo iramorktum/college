@@ -1,0 +1,20 @@
+<script>
+  let a = 1,
+        b = -5,
+        c = 6,
+        d,
+        x1,
+        x2;
+    d = b * b - 4 * a * c;
+    if (d < 0) {
+        console.log('Корней нет');
+    }
+    else if (d == 0) {
+        x1 = -b / (2 * a); 
+        console.log(x1);
+    }
+    else {
+        x1 = (-b + Math.pow(d, 0.5)) / (2 * a);
+        x2 = (-b - Math.pow(d, 0.5)) / (2 * a);
+        console.log(x1 + '; ' + x2);
+</script>
