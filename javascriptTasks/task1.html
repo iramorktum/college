@@ -1,13 +1,15 @@
+<html>  
 <script>
-let matrix = [[1, 2],
-                [3, 4],
-                [5, 6]],
-        output = [];
-    for (let i = 0; i < matrix[0].length; i++) {
-        output.push([]);
-        for (let j = matrix.length - 1; j >= 0 ; j -= 1) {
-            output[i].push(matrix[j][i]);
-        };
-    };
-    console.log(output);
-</script>
+  let matrix = [[1, 2],
+                  [3, 4],
+                  [5, 6]],
+          output = [];
+      for (let i = 0; i < matrix[0].length; i++) {
+          output.push([]);
+          for (let j = matrix.length - 1; j >= 0 ; j -= 1) {
+              output[i].push(matrix[j][i]);
+          };
+      };
+      console.log(output);
+  </script>
+</html>
