@@ -75,6 +75,10 @@
                                     };
                                 };
                             };
+                            if (win == true) {
+                                alert(winnerSide + ' победили!');
+                                field.removeEventListener('click', game);
+                            };
                             for (let j = 0; j < 3; j++) {
                                 for (let k = 1; k < 3; k++) {
                                     last = td[3 * (k - 1) + j];
@@ -87,6 +91,10 @@
                                     };
                                 };
                             };
+                            if (win == true) {
+                                alert(winnerSide + ' победили!');
+                                field.removeEventListener('click', game);
+                            };
                             for (let j = 1; j < 3; j++) {
                                 last = td[3 * (j - 1) + (3 - j)];
                                 if (td[3 * j + 2 - j].innerHTML != last.innerHTML || last.innerHTML == '') {
@@ -96,6 +104,10 @@
                                     win = true;
                                     winnerSide = last.innerHTML;
                                 };
+                            };
+                            if (win == true) {
+                                alert(winnerSide + ' победили!');
+                                field.removeEventListener('click', game);
                             };
                             for (let j = 1; j < 3; j++) {
                                 last = td[3 * (j - 1) + j - 1];
