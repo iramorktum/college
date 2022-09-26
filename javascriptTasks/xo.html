@@ -44,7 +44,7 @@
             }
         </style>
         <script>
-            let win = false,
+            /*let win = false,
                 winnerSide = '',
                 i = 0,
                 zeros = true,
@@ -129,7 +129,25 @@
                         field.removeEventListener('click', game);
                     }
                 });
+            };*/
+            let field = document.querySelector('#field'),
+                zero = false;
+            
+            function playGame() {
+                field.addEventListener('click', function click() {
+                    if (zero == false) {
+                        event.target.innerHTML = 'X';
+                        event.target.className = 'x';
+                        zero = true;
+                    } else {
+                        event.target.innerHTML = 'O';
+                        event.target.className = 'o';
+                        zero = false;
+                    };
+                    alert('win');
+                });
             };
+            
             playGame();
         </script>
     </body>
