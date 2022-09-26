@@ -53,15 +53,6 @@
                 field.addEventListener('click', function game() {
                     if (i < 9) {
                         if (event.target.className == 'empty') {
-                            if (zeros == true) {
-                                event.target.innerHTML = 'О';
-                                event.target.className = 'o';
-                                zeros = false;
-                            } else {
-                                event.target.innerHTML = 'X';
-                                event.target.className = 'x';
-                                zeros = true;
-                            }
                             let td = document.querySelectorAll('td');
                             for (let j = 0; j < 3; j++) {
                                 for (let k = 1; k < 3; k++) {
@@ -119,9 +110,18 @@
                                     winnerSide = last.innerHTML;
                                 };
                             };
+                            if (zeros == true) {
+                                event.target.innerHTML = 'О';
+                                event.target.className = 'o';
+                                zeros = false;
+                            } else {
+                                event.target.innerHTML = 'X';
+                                event.target.className = 'x';
+                                zeros = true;
+                            }
                             if (win == true) {
-                                field.removeEventListener('click', game);
                                 alert(winnerSide + ' победили!');
+                                field.removeEventListener('click', game);
                             };
                         };
                         i++
