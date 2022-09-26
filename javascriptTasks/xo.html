@@ -21,6 +21,7 @@
                 <td class = 'empty'></td>
             </tr>
         </table>
+        <div id = 'win'>ПОБЕДА</div>
         <style>
             #field {
                 border-spacing: 0;
@@ -42,13 +43,17 @@
             .x {
                 background-color: #EAC7CA;
             }
+            #win {
+                display: hidden;
+            }
         </style>
         <script>
-            /*let win = false,
+            let win = false,
                 winnerSide = '',
                 i = 0,
                 zeros = true,
-                field = document.querySelector('#field');
+                field = document.querySelector('#field'),
+                winString = document.querySelector('#win');
             function playGame() {
                 field.addEventListener('click', function game() {
                     if (i < 9) {
@@ -75,7 +80,7 @@
                                     };
                                 };
                                 if (win == true) {
-                                    alert(winnerSide + ' победили!');
+                                    winString.style.display = 'inline';
                                     field.removeEventListener('click', game);
                                 };
                             };
@@ -91,7 +96,7 @@
                                     };
                                 };
                                 if (win == true) {
-                                    alert(winnerSide + ' победили!');
+                                    winString.style.display = 'inline';
                                     field.removeEventListener('click', game);
                                 };
                             };
@@ -106,7 +111,7 @@
                                 };
                             };
                             if (win == true) {
-                                alert(winnerSide + ' победили!');
+                                winString.style.display = 'inline';
                                 field.removeEventListener('click', game);
                             };
                             for (let j = 1; j < 3; j++) {
@@ -120,7 +125,7 @@
                                 };
                             };
                             if (win == true) {
-                                alert(winnerSide + ' победили!');
+                                winString.style.display = 'inline';
                                 field.removeEventListener('click', game);
                             };
                         };
@@ -129,25 +134,8 @@
                         field.removeEventListener('click', game);
                     }
                 });
-            };*/
-            let field = document.querySelector('#field'),
-                zero = false;
-            
-            function playGame() {
-                field.addEventListener('click', function click() {
-                    if (zero == false) {
-                        event.target.innerHTML = 'X';
-                        event.target.className = 'x';
-                        zero = true;
-                    } else {
-                        event.target.innerHTML = 'O';
-                        event.target.className = 'o';
-                        zero = false;
-                    };
-                    alert('win');
-                });
             };
-            
+
             playGame();
         </script>
     </body>
