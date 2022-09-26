@@ -52,6 +52,10 @@
             function playGame() {
                 field.addEventListener('click', function game() {
                     if (i < 9) {
+                        if (win == true) {
+                            alert(winnerSide + ' победили!');
+                            field.removeEventListener('click', game);
+                        };
                         if (event.target.className == 'empty') {
                             if (zeros == true) {
                                 event.target.innerHTML = 'О';
@@ -118,10 +122,6 @@
                                     win = true;
                                     winnerSide = last.innerHTML;
                                 };
-                            };
-                            if (win == true) {
-                                alert(winnerSide + ' победили!');
-                                field.removeEventListener('click', game);
                             };
                         };
                         i++
