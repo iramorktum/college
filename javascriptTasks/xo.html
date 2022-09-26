@@ -62,10 +62,6 @@
                                 event.target.className = 'x';
                                 zeros = true;
                             }
-                            if (win == true) {
-                                alert(winnerSide + ' победили!');
-                                field.removeEventListener('click', game);
-                            };
                             let td = document.querySelectorAll('td');
                             for (let j = 0; j < 3; j++) {
                                 for (let k = 1; k < 3; k++) {
