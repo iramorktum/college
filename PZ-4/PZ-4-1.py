@@ -6,7 +6,6 @@ n = int(input())
 i = 1
 output = 0
 while i <= n:
-    print(output)
     output += (-1) ** (i - 1) * x ** i / i
     i += 1
 print(output)
