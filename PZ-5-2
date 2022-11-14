@@ -1,0 +1,10 @@
+import math
+
+def Power1(a, b):
+    if a <= 0:
+        print(a)
+    else:
+        return math.exp(b * math.log(a))
+        
+a, b, c, p = float(input('Число: ')), float(input('Число: ')), float(input('Число: ')), float(input('Степень: '))
+print(Power1(a, p), Power1(b, p), Power1(c, p))
