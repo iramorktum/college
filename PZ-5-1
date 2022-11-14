@@ -1,0 +1,5 @@
+def row(a1, d, n):
+    return ((2 * a1 + d * (n - 1)) / 2) * n
+
+a1, d, n = int(input('Первый элемент: ')), int(input('Ход: ')), int(input('Количество элементов: '))
+print(row(a1, d, n))
